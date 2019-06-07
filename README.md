@@ -1,29 +1,27 @@
-# env-test
+## Environment variables in Vue cli 3 app
 
-## Project setup
-```
-yarn install
-```
+**SET**  
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+Staging for example : 
 
-### Compiles and minifies for production
+Set up the file named ".env.staging" and place in project root folder.   
+The variable name be prefixed with 
+"<span span style="color:red">VUE_APP_</span>"  
 ```
-yarn run build
+VUE_APP_TITLE=sample_data
 ```
 
-### Run your tests
+**USE**  in javascript
 ```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
+process.env.VUE_APP_TITLE
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+**BUILD**  
+```
+vue-cli-service build --mode staging
+```
+
+
+ref:  
+https://cli.vuejs.org/guide/mode-and-env.html#environment-variables
+
